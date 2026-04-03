@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+
+body {
+    background-image: url(./images/mainBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-bar {
+    padding: 20px;
+    color: white;
+    height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: rgba(0, 0, 0, 0.322);
+    backdrop-filter: blur(10px);
+}
+
+ul,
+li {
+    display: flex;
+    list-style: none;
+    color: white;
+    gap: 20px;
+}
+
+ul,
+li,
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.ul,
+li,
+a:hover {
+    color: aqua;
+    transition: all 1.5s ease;
+}
+
+.nav-bar h2 {
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {
+        color: yellow;
+    }
+
+    25% {
+        color: aqua;
+    }
+
+    50% {
+        color: white;
+    }
+
+    100% {
+        color: yellowgreen;
+    }
+}
+
+
+/* Hero Section */
+
+.card {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+
+}
+
+
+.text {
+    background-color: rgba(255, 255, 255, 0.068);
+    border: 1px solid rgba(255, 255, 255, 0.144);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px 70px;
+}
+
+.text h1 {
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    margin: 5px;
+}
+
+
+.text p {
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1.3em;
+}
+
+/* About-Section */
+
+.second-main-container {
+    background-image: url(./images/b3473e153e708db362d199b7339ebd26.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Services-Section */
+
+.Third-main-container {
+    background-image: url(./images/servicesBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Contact-Section  */
+
+.Fourth-main-container {
+    background-image: url(./images/contactBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Contact-card {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-text {
+    background-color: rgba(255, 255, 255, 0.068);
+    border: 3px solid rgba(255, 255, 255, 0.144);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px 70px;
+}
+
+.last-text h1 {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    padding: 10px 0;
+}
+
+/* Input */
+
+.contact input {
+    background-color: rgba(255, 255, 255, 0.548);
+    backdrop-filter: blue(10px);
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.contact input:focus {
+    outline: none;
+}
+
+.contact textarea {
+    background-color: rgba(255, 255, 255, 0.548);
+    backdrop-filter: blue(10px);
+    border: none;
+    border-radius: 20px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.contact textarea:focus {
+    outline: none;
+}
+
+.submit input {
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0.521);
+    color: rgb(0, 0, 0);
+}
+
+.submit input:hover {
+    background-color: white;
+    transition: all 1.2s ease;
+}
+
+.contact-lastmsg a {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin-top: 10px;
+    font-size: 1.2em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+}
+
+.contact-lastmsg a:active {
+    color: rgb(250, 167, 58)
+}
+
+
+/* nav responsive icon */
+
+.icon {
+    font-size: 1.5em;
+    display: none;
+}
+
+
+/* Media Queryy */
+
+@media only screen and (min-width: 200px) and (max-width: 668px) {
+
+    .nav-bar ul {
+        display: none;
+    }
+
+    .icon {
+        display: flex;
+    }
+
+    .last-text h1 {
+        text-align: center;
+    }
+
+    .textarea {
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 35px;
+    }
+}
+
+/* CSS Completed */
